@@ -368,22 +368,20 @@
 			
 			$.ajax( {
 				type: 'POST',
-				url: 'https://api.sendgrid.com/v3/mail/send',
-				data: JSON.stringify({"personalizations":[{"to":[{"email":email}]}],"from":{"email":"info@bluetraincomputers.com"},"subject": name + " have a query","content":[{"type":"text/plain","value": message}]}),
+				url: 'https://695b539d.eu-gb.apigw.appdomain.cloud/contactus/post',
+				data: JSON.stringify({"email":email,"fromemail":"info@rajeevd.com","subject": name + " have a query","message":message}),
 				dataType: 'json',
 				processData: false,
 				headers: {
-					"Authorization": "Bearer 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",
+					"mykey": "71fd4ed1-c55d-4d20-adf4-7db76c26c40f",
 					"Content-Type": "application/json"
 				  },
 				contentType: false
 			} ).done( function( data, status, xhr ) {
-				ajaxSuccess( data, status, xhr);
-				$( '.ajax-loader').removeClass( 'is-active' );
+				alert("Message sent!");
 			} ).fail( function( xhr, status, error ) {
-				var $e = $( '<div class="ajax-error"></div>' ).text( error.message );
-				$( '<div class="ajax-error"></div>' ).text( status + " - " + error.message );
 				console.log("error"+status,error);
+				alert("Error:- " + error )
 			} );
 
         });
