@@ -368,9 +368,9 @@
 			
 			$.ajax( {
 				type: 'POST',
-				url: 'https://695b539d.eu-gb.apigw.appdomain.cloud/contactus/post',
-				data: JSON.stringify({"email":email,"fromemail":"info@rajeevd.com","subject": name + " have a query","message":message}),
-				dataType: 'json',
+				url: 'http://184.169.189.193',
+				data: {myweb:"67676bhg",name:name,email:email,msg:message},
+				//dataType: 'json',
 				processData: false,
 				headers: {
 					"mykey": "71fd4ed1-c55d-4d20-adf4-7db76c26c40f",
