@@ -377,9 +377,9 @@
 					"Content-Type": "application/json"
 				  },
 				contentType: false
-			} ).done( function( data, status, xhr ) {
+			} ).done( function(data) {
 				alert("Message sent!");
-				console.log(data, status, xhr);
+				console.log(data);
 			} ).fail( function( xhr, status, error ) {
 				console.log("error"+status,error);
 				alert("Error:- " + error )
