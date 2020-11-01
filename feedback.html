@@ -368,15 +368,10 @@
 			
 			$.ajax( {
 				type: 'POST',
-				url: 'https://webmail.rajeevd.com',
+				url: 'https://webmail.rajeevd.com/',
 				data: {myweb:"c55d-7db76c26c40f",name:name,email:email,msg:message},
 				dataType: 'text',
-				//processData: false,
-				headers: {
-					"mykey": "71fd4ed1-c55d-4d20-adf4-7db76c26c40f",
-					"Content-Type": "application/json"
-				  },
-				contentType: false
+				//contentType: false
 			} ).done( function(data) {
 				alert("Message sent!");
 				console.log(data);
