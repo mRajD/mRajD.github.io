@@ -379,6 +379,7 @@
 				contentType: false
 			} ).done( function( data, status, xhr ) {
 				alert("Message sent!");
+				console.log(data, status, xhr);
 			} ).fail( function( xhr, status, error ) {
 				console.log("error"+status,error);
 				alert("Error:- " + error )
